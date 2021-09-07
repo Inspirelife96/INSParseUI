@@ -8,11 +8,54 @@
 
 #import "INSAppDelegate.h"
 
+#import <Parse/Parse.h>
+
+#import <INSParseUI-umbrella.h>
+
+#import <SwiftTheme/SwiftTheme-umbrella.h>
+
 @implementation INSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [ThemeManager setThemeWithPlistInMainBundle:@"ThemeDefault"];
+    
+    // 初始化Parse
+    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+        configuration.applicationId = @"oDzmpRypCHeD8K8bI8lD7yDpBGU1povw14h2dL9j";
+        configuration.clientKey = @"";
+        configuration.server = @"https://inspirelife2017.com/learnpaint2";
+        configuration.networkRetryAttempts = 0;
+        NSURLSessionConfiguration *URLSessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        URLSessionConfiguration.timeoutIntervalForRequest = 15.0f;
+        configuration.URLSessionConfiguration = URLSessionConfiguration;
+    }]];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    INSLogInViewController *loginVM = [[INSLogInViewController alloc] init];
+    
+    INSFeedQueryViewModel *feedQueryVM = [[INSFeedQueryViewModel alloc] initQueryFeedWithOrderBy:@"createdAt"];
+    
+    INSQueryViewController *queryVC = [[INSQueryViewController alloc] initWithQueryVM:feedQueryVM];
+    UINavigationController *queryNV = [[UINavigationController alloc] initWithRootViewController:queryVC];
+    
+    
+    INSAddFeedViewController *addFeedVC = [[INSAddFeedViewController alloc] init];
+    addFeedVC.addFeedVM = [[INSAddFeedViewModel alloc] init];
+    UINavigationController *addFeedNV = [[UINavigationController alloc] initWithRootViewController:addFeedVC];
+    
+    UITabBarController *tabbarVC = [[UITabBarController alloc] init];
+    tabbarVC.viewControllers = @[loginVM, queryNV, addFeedNV];
+    
+    
+    
+    self.window.rootViewController = tabbarVC;
+
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

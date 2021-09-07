@@ -1,0 +1,94 @@
+{
+  "name": "INSParseUI",
+  "version": "0.1.0",
+  "summary": "A short description of INSParseUI.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/inspirelife@hotmail.com/INSParseUI",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "inspirelife@hotmail.com": "inspirelife@hotmail.com"
+  },
+  "source": {
+    "git": "https://github.com/inspirelife@hotmail.com/INSParseUI.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "source_files": "INSParseUI/Classes/**/*",
+  "public_header_files": "INSParseUI/Classes/**/*.h",
+  "dependencies": {
+    "Parse": [
+
+    ],
+    "INSParse": [
+
+    ],
+    "JKCategories/Foundation/NSDate": [
+
+    ],
+    "JKCategories/Foundation/NSString": [
+
+    ],
+    "JKCategories/UIKit/UIWindow": [
+
+    ],
+    "JKCategories/UIKit/UIScreen": [
+
+    ],
+    "JKCategories/UIKit/UIButton": [
+
+    ],
+    "JKCategories/UIKit/UIColor": [
+
+    ],
+    "JKCategories/UIKit/UIView": [
+
+    ],
+    "DZNEmptyDataSet": [
+
+    ],
+    "Masonry": [
+
+    ],
+    "lottie-ios": [
+
+    ],
+    "SDWebImage": [
+
+    ],
+    "YBImageBrowser": [
+
+    ],
+    "MJRefresh": [
+
+    ],
+    "SVProgressHUD": [
+
+    ],
+    "SCLAlertView-Objective-C": [
+
+    ],
+    "YYText": [
+
+    ],
+    "SwiftTheme": [
+
+    ],
+    "TZImagePickerController": [
+
+    ],
+    "MKDropdownMenu": [
+
+    ],
+    "LSTPopView": [
+
+    ],
+    "HJTabViewController": [
+      "~> 1.0"
+    ]
+  }
+}

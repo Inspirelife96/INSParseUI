@@ -28,15 +28,38 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/inspirelife@hotmail.com/INSParseUI.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'INSParseUI/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'INSParseUI' => ['INSParseUI/Assets/*.png']
-  # }
+#  s.resource_bundles = {
+#    'INSParseUI' => ['INSParseUI/Assets/*.*']
+#  }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'INSParseUI/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Parse'
+  s.dependency 'INSParse'
+  s.dependency 'JKCategories/Foundation/NSDate'
+  s.dependency 'JKCategories/Foundation/NSString'
+  s.dependency 'JKCategories/UIKit/UIWindow'
+  s.dependency 'JKCategories/UIKit/UIScreen'
+  s.dependency 'JKCategories/UIKit/UIButton'
+  s.dependency 'JKCategories/UIKit/UIColor'
+  s.dependency 'JKCategories/UIKit/UIView'
+  s.dependency 'DZNEmptyDataSet'
+  s.dependency 'Masonry'
+  s.dependency 'lottie-ios'
+  s.dependency 'SDWebImage'
+  s.dependency 'YBImageBrowser'
+  s.dependency 'MJRefresh'
+  s.dependency 'SVProgressHUD'
+  s.dependency 'SCLAlertView-Objective-C'
+  s.dependency 'YYText'
+  s.dependency 'SwiftTheme'
+  s.dependency 'TZImagePickerController'
+  s.dependency 'MKDropdownMenu'
+  s.dependency 'LSTPopView'
+  s.dependency 'HJTabViewController', '~> 1.0'
+  
 end
