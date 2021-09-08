@@ -10,7 +10,7 @@
 #endif
 #endif
 
-#import <Parse/Parse.h>
+#import <Parse/Parse-umbrella.h>
 #import <INSParse/INSParse-umbrella.h>
 #import <DZNEmptyDataSet/DZNEmptyDataSet-umbrella.h>
 #import <Lottie/lottie-ios-umbrella.h>
@@ -27,3 +27,4 @@
 #import <TZImagePickerController/TZImagePickerController.h>
 #import <MKDropdownMenu/MKDropdownMenu.h>
 #import <LSTPopView/LSTPopView.h>
+#import <HJTabViewController/HJTabViewController-umbrella.h>

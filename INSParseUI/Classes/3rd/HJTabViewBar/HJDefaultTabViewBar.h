@@ -6,7 +6,8 @@
 //  Copyright © 2017年 olinone. All rights reserved.
 //
 
-#import "HJTabViewBar.h"
+#import <HJTabViewController/HJTabViewController-umbrella.h>
+
 @class HJDefaultTabViewBar;
 
 @protocol HJDefaultTabViewBarDelegate <NSObject>

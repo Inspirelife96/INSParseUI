@@ -9,7 +9,6 @@
 
 @class INSFeed;
 
-
 @class INSFeedViewModel;
 @class INSCommentViewModel;
 

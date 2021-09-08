@@ -1,6 +1,6 @@
 {
   "name": "INSParseUI",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "summary": "A short description of INSParseUI.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Inspirelife96/INSParseUI",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Inspirelife96/INSParseUI.git",
-    "tag": "0.1.5"
+    "tag": "0.1.6"
   },
   "platforms": {
     "ios": "13.0"
@@ -25,7 +25,7 @@
     ]
   },
   "prefix_header_contents": [
-    "#import <Parse/Parse.h>",
+    "#import <Parse/Parse-umbrella.h>",
     "#import <INSParse/INSParse-umbrella.h>",
     "#import <DZNEmptyDataSet/DZNEmptyDataSet-umbrella.h>",
     "#import <Lottie/lottie-ios-umbrella.h>",
@@ -41,7 +41,8 @@
     "#import <SwiftTheme/SwiftTheme-Swift.h>",
     "#import <TZImagePickerController/TZImagePickerController.h>",
     "#import <MKDropdownMenu/MKDropdownMenu.h>",
-    "#import <LSTPopView/LSTPopView.h>"
+    "#import <LSTPopView/LSTPopView.h>",
+    "#import <HJTabViewController/HJTabViewController-umbrella.h>"
   ],
   "public_header_files": "INSParseUI/Classes/**/*.h",
   "frameworks": "UIKit",
