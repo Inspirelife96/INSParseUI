@@ -7,6 +7,8 @@
 
 #import "INSObjectViewModel.h"
 
+#import <Parse/Parse-umbrella.h>
+
 @class INSActivity;
 @class INSFeedViewModel;
 @class INSCommentViewModel;

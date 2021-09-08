@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import <Parse/Parse-umbrella.h>
+
 @class INSFeed;
 
 @class INSFeedViewModel;
