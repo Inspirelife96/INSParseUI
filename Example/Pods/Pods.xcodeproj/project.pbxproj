@@ -159,7 +159,6 @@
 		18BC17CDA258E5F4836A22AA75442FBC /* PFObjectBatchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274FEFFB8FE0ACD388FDA6D55D000BCF /* PFObjectBatchController.m */; };
 		192E996D67BB34EB0A762AE672900FBC /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7E24C3D6E76DCC5931F5B21CCF56155 /* CGFloatExtensions.swift */; };
 		1951A933D1C80E09A0B1503A93BF94C1 /* AnimationImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D43BE81F05514A02EC381EDC82448B /* AnimationImageProvider.swift */; };
-		1966488EF13C85568CBA8AA9922F51E5 /* editButton@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 456A143B8EB470F388E686D538080558 /* editButton@2x.png */; };
 		197A36B425C477396BCE1B82DD428DE1 /* YYTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 05E761B30F86B045C24FBE1EE7BED408 /* YYTextInput.m */; };
 		197B4BCEE4599CF2AF93A8DF34BD809B /* PFObjectControlling.h in Headers */ = {isa = PBXBuildFile; fileRef = 9006F87F2872E1B1F4D5FE1DE0C96A41 /* PFObjectControlling.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		19A326865FBCF849905BDF2C6F7A972C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93DF14AE6B50BE95AFE35C3A4E740E66 /* UIKit.framework */; };
@@ -756,6 +755,8 @@
 		7F2178F7C294EAC3E704B8D210CC5613 /* PFConfig_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0536D95092669E0121D2E0A1EA216910 /* PFConfig_Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		7F80EAFEB0CB81A7A6C95C88A8A9F453 /* TrimPathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B633225E7AD92DC842435D59456DB993 /* TrimPathNode.swift */; };
 		7FBD79C5F8A3EC8F0E8AF35A83544A7B /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = C5275325DF2AD6F64C52BB2AEA04FF02 /* FBSnapshotTestCase.m */; };
+		7FECDB3C26E8ABBD00911A68 /* editButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FECDB3926E8ABBD00911A68 /* editButton@2x.png */; };
+		7FECDB3D26E8ABBD00911A68 /* editButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FECDB3A26E8ABBD00911A68 /* editButton@3x.png */; };
 		7FFFB11E2693354300641EE0 /* UINavigationBar+INSBackgroundAlpha.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FFFB11C2693354300641EE0 /* UINavigationBar+INSBackgroundAlpha.h */; };
 		7FFFB11F2693354300641EE0 /* UINavigationBar+INSBackgroundAlpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FFFB11D2693354300641EE0 /* UINavigationBar+INSBackgroundAlpha.m */; };
 		7FFFB13E26933A4700641EE0 /* UIViewController+INSLogin.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FFFB13C26933A4700641EE0 /* UIViewController+INSLogin.h */; };
@@ -852,7 +853,6 @@
 		8E1F4EF258CE795834096D2C0C71BFCE /* PFObjectConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CAACC71945433630FA04B384DFE490 /* PFObjectConstants.m */; };
 		8E30B7DA0041E761CA840C538EC05152 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A4DBE39FC8683E325BF71562623D27 /* Foundation.framework */; };
 		8E9F0864674184F4E06104484F8D921C /* PFRESTUserCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB38F0D3AA22A81136A1D13951BB480 /* PFRESTUserCommand.m */; };
-		8E9FE23E2925434E0F4916C54E96C51B /* CLTextView.xib in Sources */ = {isa = PBXBuildFile; fileRef = CE85DBDEFF664DF7F4123D87500F255F /* CLTextView.xib */; };
 		8EB5C170F7FEC325CDCA963048A5654C /* MJRefreshBackGifFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 795D8026892842A4EBFC4B2CF4FA2EC2 /* MJRefreshBackGifFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EC26D05F85D28DBBBE826E3900349A3 /* ThemeFontPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ABBC431B933C00E6B19D08A705F9DF /* ThemeFontPicker.swift */; };
 		8F01459E3071287E2CA047D852D052AC /* UIView+LSTPV.h in Headers */ = {isa = PBXBuildFile; fileRef = 94CB677AC9EA5DF628C030586D8629B6 /* UIView+LSTPV.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1249,7 +1249,6 @@
 		CBE61D03932B567330C877B58EB1369A /* PFUserState.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BEE2C9F2FE5E526A84855E5C9D5722B /* PFUserState.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CC0FDD9E8F9220709EB43C9BFF57A744 /* YYTextTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = F17923D3660BE26C0E2706D776A11700 /* YYTextTransaction.m */; };
 		CC4E681962D5C6DF703F00141BDE96B7 /* ThemeActivityIndicatorViewStylePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61192748C3F000AE1B2CF586D2F8A01 /* ThemeActivityIndicatorViewStylePicker.swift */; };
-		CC5AA126055AE24E8295B531A27CB3AC /* editButton@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 90137ADFAD022FCD9B00C9CFA5C36FEE /* editButton@3x.png */; };
 		CC923701D483B1E02896BCEBB45FA519 /* PFObjectUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E54D2E4C68051C3F53E53F278D1780B1 /* PFObjectUtilities.m */; };
 		CCB7DCA2AD9428D3C7F9752EC2581998 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66776D76A6EEB5B76244D57A5A49AC2 /* AudioToolbox.framework */; };
 		CCD8A5B178D9403333859BA89AC9F445 /* INSQueryViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = ECC50EE1CFF270F15B2796E0AC015884 /* INSQueryViewModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -2395,7 +2394,6 @@
 		4550138B3D12FF4F84EF56D0FBB525F7 /* SDImageCoderHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SDImageCoderHelper.m; sourceTree = "<group>"; };
 		455879E705A102D461A434B25844B70F /* PFReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PFReachability.m; sourceTree = "<group>"; };
 		456583DB184BA1DCAA2DEA6E285119A0 /* lottie-ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-prefix.pch"; sourceTree = "<group>"; };
-		456A143B8EB470F388E686D538080558 /* editButton@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "editButton@2x.png"; sourceTree = "<group>"; };
 		45AC97843F6BE0E416D155B02BC0ABF9 /* NSData+JKAPNSToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+JKAPNSToken.m"; path = "JKCategories/Foundation/NSData/NSData+JKAPNSToken.m"; sourceTree = "<group>"; };
 		45B2536F3CB7964525E2C0E15DB8295C /* PFMutablePushState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PFMutablePushState.m; sourceTree = "<group>"; };
 		45E95AC87DEEB0BABDF732AD54B0B4C6 /* SDWebImageCacheKeyFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCacheKeyFilter.m; sourceTree = "<group>"; };
@@ -2772,6 +2770,9 @@
 		7EB11C85712D571C3AB309FAE71E52EA /* UIButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
 		7F46A47B7D6508F75F0D4D9DFE4D9E86 /* MKDropdownMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MKDropdownMenu.modulemap; sourceTree = "<group>"; };
 		7FAB7BC58FF03C3BEA953F21C28B68AE /* YBImageBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YBImageBrowser.debug.xcconfig; sourceTree = "<group>"; };
+		7FECDB3926E8ABBD00911A68 /* editButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "editButton@2x.png"; sourceTree = "<group>"; };
+		7FECDB3A26E8ABBD00911A68 /* editButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "editButton@3x.png"; sourceTree = "<group>"; };
+		7FECDB9326E8ABE100911A68 /* CLTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CLTextView.xib; sourceTree = "<group>"; };
 		7FFFB11C2693354300641EE0 /* UINavigationBar+INSBackgroundAlpha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+INSBackgroundAlpha.h"; sourceTree = "<group>"; };
 		7FFFB11D2693354300641EE0 /* UINavigationBar+INSBackgroundAlpha.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+INSBackgroundAlpha.m"; sourceTree = "<group>"; };
 		7FFFB13C26933A4700641EE0 /* UIViewController+INSLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+INSLogin.h"; sourceTree = "<group>"; };
@@ -2884,7 +2885,6 @@
 		8FA874B9C45B921FADEEFEBB08229D88 /* SDWebImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SDWebImage.modulemap; sourceTree = "<group>"; };
 		8FAAF4CF71A3A9136E8B8C3E39607EB9 /* PFUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUser.h; path = Parse/Parse/PFUser.h; sourceTree = "<group>"; };
 		9006F87F2872E1B1F4D5FE1DE0C96A41 /* PFObjectControlling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PFObjectControlling.h; sourceTree = "<group>"; };
-		90137ADFAD022FCD9B00C9CFA5C36FEE /* editButton@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; path = "editButton@3x.png"; sourceTree = "<group>"; };
 		90399737E2D6E99B9B851629CFA710C8 /* ThemeImagePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThemeImagePicker.swift; path = Sources/ThemeImagePicker.swift; sourceTree = "<group>"; };
 		90536BED17DF0940B25E5C22ABE969C4 /* PFCurrentConfigController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PFCurrentConfigController.h; sourceTree = "<group>"; };
 		9065DCACD0C06D07788C1118BA9996AE /* PFObjectFileCodingLogic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PFObjectFileCodingLogic.h; sourceTree = "<group>"; };
@@ -3312,7 +3312,6 @@
 		CE5F7BB1E882EDBF4F3C5CCC72DFAD30 /* INSQueryViewController+Feed.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "INSQueryViewController+Feed.m"; sourceTree = "<group>"; };
 		CE621B87BA8BBDE76BB3C23A8D37D31E /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE762F3D1589FDEC6A7625390D94C0A0 /* EXPMatchers+postNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EXPMatchers+postNotification.m"; sourceTree = "<group>"; };
-		CE85DBDEFF664DF7F4123D87500F255F /* CLTextView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = CLTextView.xib; sourceTree = "<group>"; };
 		CE9565FFA94AE90CD82CB53899262B58 /* MJRefreshComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MJRefreshComponent.h; sourceTree = "<group>"; };
 		CEA2E006162A33FF2C2C6001A28F02E2 /* INSParse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = INSParse.release.xcconfig; sourceTree = "<group>"; };
 		CEE713F9705E002D236C477D2E32DA7A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -6054,6 +6053,16 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		7FECDB3826E8ABBD00911A68 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7FECDB3926E8ABBD00911A68 /* editButton@2x.png */,
+				7FECDB3A26E8ABBD00911A68 /* editButton@3x.png */,
+				7FECDB9326E8ABE100911A68 /* CLTextView.xib */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		7FFFB17D2693EBBE00641EE0 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
@@ -6392,6 +6401,7 @@
 		A02766E8F2953BADF582393E7C990F30 /* INSParseUI */ = {
 			isa = PBXGroup;
 			children = (
+				7FECDB3826E8ABBD00911A68 /* Assets */,
 				0922547A3256F81A840899F3F80C2D07 /* 3rd */,
 				F84DE33ACE47CD4A4DBA48952461152E /* Category */,
 				2C65B1789420D07779207575F9685E80 /* Constant */,
@@ -6911,9 +6921,6 @@
 				54E579819E600BF412BD8600CB4D841F /* CLBottomCommentViewDelegate.h */,
 				334D864B73EB32F89052740B8673DFD6 /* CLTextView.h */,
 				0E48C6B143A375A4E3A9BB02A7752BCF /* CLTextView.m */,
-				CE85DBDEFF664DF7F4123D87500F255F /* CLTextView.xib */,
-				456A143B8EB470F388E686D538080558 /* editButton@2x.png */,
-				90137ADFAD022FCD9B00C9CFA5C36FEE /* editButton@3x.png */,
 			);
 			path = CLBottomCommentView;
 			sourceTree = "<group>";
@@ -9287,6 +9294,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FECDB3C26E8ABBD00911A68 /* editButton@2x.png in Resources */,
+				7FECDB3D26E8ABBD00911A68 /* editButton@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -9420,9 +9429,6 @@
 				C49507859D1916F1BF1ACDFADAD5C9CA /* CLBottomCommentView.m in Sources */,
 				0F2CFBC665CC1F03E383E631B41B7ECF /* CLBottomCommentView.xib in Sources */,
 				EB7F74F765BFC8CBEED85AFD24480543 /* CLTextView.m in Sources */,
-				8E9FE23E2925434E0F4916C54E96C51B /* CLTextView.xib in Sources */,
-				1966488EF13C85568CBA8AA9922F51E5 /* editButton@2x.png in Sources */,
-				CC5AA126055AE24E8295B531A27CB3AC /* editButton@3x.png in Sources */,
 				B6E17DB885E3D97AC553B315E27A5579 /* HJDefaultTabViewBar.m in Sources */,
 				669AA350C02B487F5804512AB0E0904D /* INSAddFeedViewController+INSSwitchCellDelegate.m in Sources */,
 				73A6B7B736A8F1556CC9D5FEC4A40B55 /* INSAddFeedViewController+INSTextViewCellDelegate.m in Sources */,

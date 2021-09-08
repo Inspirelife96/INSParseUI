@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'INSParseUI'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of INSParseUI.'
 
 # This description is used to generate tags and improve search results.
@@ -21,20 +21,20 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/inspirelife@hotmail.com/INSParseUI'
+  s.homepage         = 'https://github.com/Inspirelife96/INSParseUI'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'inspirelife@hotmail.com' => 'inspirelife@hotmail.com' }
-  s.source           = { :git => 'https://github.com/inspirelife@hotmail.com/INSParseUI.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Inspirelife96/INSParseUI.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '13.0'
 
   s.source_files = 'INSParseUI/Classes/**/*'
   
-#  s.resource_bundles = {
-#    'INSParseUI' => ['INSParseUI/Assets/*.*']
-#  }
+  s.resource_bundles = {
+    'INSParseUI' => ['INSParseUI/Assets/*.*']
+  }
 
   s.public_header_files = 'INSParseUI/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
