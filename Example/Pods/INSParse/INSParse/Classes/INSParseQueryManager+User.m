@@ -24,7 +24,6 @@
     }
 }
 
-// 同步注册，必须异步调用。
 + (void)signUpWithUsername:(NSString *)userName password:(NSString *)password email:(NSString *)email error:(NSError **)error {
     PFUser *user = [PFUser user];
     user.username = userName;
@@ -34,7 +33,7 @@
     BOOL succeeded = [user signUp:error];
     
     if (succeeded) {
-        succeeded = [INSParseQueryManager _configUserAfterLogin:user error:error];
+        succeeded = [INSParseQueryManager _configUserAfterSignUp:user error:error];
         if (!succeeded) {
             [PFUser logOut];
         }
@@ -56,7 +55,13 @@
             PFUser *user = task.result;
             
             if (user) {
-                BOOL succeeded = [INSParseQueryManager _configUserAfterLogin:user error:&loginError];
+                BOOL succeeded = NO;
+                if (user.isNew) {
+                    succeeded = [INSParseQueryManager _configUserAfterSignUp:user error:&loginError];
+                } else {
+                    succeeded = [INSParseQueryManager _configUserAfterLogin:user error:&loginError];
+                }
+ 
                 if (!succeeded) {
                     [PFUser logOut];
                 }
@@ -71,37 +76,27 @@
     return appleAuthTask;
 }
 
-+ (void)logout {
++ (void)logOut {
+    [INSParseQueryManager _configUserBeforeLogout];
     [PFUser logOut];
-    
-    [[PFInstallation currentInstallation] removeObjectForKey:@"user"];
-    [[PFInstallation currentInstallation] saveEventually];
 }
 
-+ (void)unsubscribe {
-    NSString *username = [[NSUUID UUID] UUIDString];
-    NSString *password = @"ILoveMS007";
-    NSString *email = [NSString stringWithFormat:@"%@@homtial.com", username];
-    [PFUser currentUser].username = username;
-    [PFUser currentUser].email = email;
-    [PFUser currentUser].password = password;
-    [[PFUser currentUser] setObject:@"Unsubscribed" forKey:@"status"];
-    [[PFUser currentUser] removeObjectForKey:@"authData"];
-    
-    [[PFUser currentUser] save];
-    
-    [PFUser logOut];
++ (void)unsubscribe:(NSError **)error; {
+    [INSParseQueryManager _configUserBeforeUnsubscribe:[PFUser currentUser] error:error];
+    [INSParseQueryManager logOut];
 }
 
 + (void)requestPasswordResetForEmail:(NSString *)email error:(NSError **)error {
     [PFUser requestPasswordResetForEmail:email error:error];
 }
 
+#pragma mark Private Methods
+
 + (BOOL)_configUserAfterLogin:(PFUser *)user error:(NSError **)error {
-    BOOL succeed =  [INSParseQueryManager _addFollowInfoForUser:user error:error];
+    BOOL succeed =  [INSParseQueryManager _fetchFollowInfoForUser:user error:error];
     
     if (succeed) {
-        [INSParseQueryManager _linkInstallationWithUser:user error:error];
+        succeed = [INSParseQueryManager _linkPushWithUser:user error:error];
     }
     
     if (succeed) {
@@ -111,30 +106,74 @@
     return succeed;
 }
 
-+ (BOOL)_addFollowInfoForUser:(PFUser *)user error:(NSError **)error {
++ (BOOL)_configUserAfterSignUp:(PFUser *)user error:(NSError **)error {
+    BOOL succeed = [INSParseQueryManager _activeUser:user error:error];
+    
+    if (succeed) {
+        succeed = [INSParseQueryManager _createFollowInfoForUser:user error:error];
+    }
+    
+    if (succeed) {
+        return [INSParseQueryManager _configUserAfterLogin:user error:error];
+    }
+    
+    return succeed;
+}
+
++ (void)_configUserBeforeLogout {
+    return [INSParseQueryManager _unlinkPushWithUser];
+}
+
++ (BOOL)_configUserBeforeUnsubscribe:(PFUser *)user error:(NSError **)error {
+    return [INSParseQueryManager _unsubscribeUser:user error:error];
+}
+
++ (BOOL)_activeUser:(PFUser *)user error:(NSError **)error {
+    [user setObject:@"Actived" forKey:@"status"];
+    return [user save:error];
+}
+
++ (BOOL)_unsubscribeUser:(PFUser *)user error:(NSError **)error {
+    [user setObject:@"unsubscribe" forKey:@"status"];
+    return [user save:error];
+}
+
++ (BOOL)_createFollowInfoForUser:(PFUser *)user error:(NSError **)error {
+    INSFollowInfo *followInfo = [[INSFollowInfo alloc] init];
+    followInfo.user = user;
+    followInfo.followCount = @(0);
+    followInfo.followedCount = @(0);
+    BOOL succeeded = [followInfo save:error];
+    
+    if (succeeded) {
+        [user setObject:followInfo forKey:@"followInfo"];
+        return [user save:error];
+    } else {
+        return NO;
+    }
+}
+
++ (BOOL)_fetchFollowInfoForUser:(PFUser *)user error:(NSError **)error {
     INSFollowInfo *followInfo = [user objectForKey:@"followInfo"];
     if (followInfo) {
         return [followInfo fetchIfNeeded:error];
     } else {
-        followInfo = [[INSFollowInfo alloc] init];
-        followInfo.user = user;
-        followInfo.followCount = @(0);
-        followInfo.followedCount = @(0);
-        BOOL succeeded = [followInfo save:error];
-        
-        if (succeeded) {
-            [user setObject:followInfo forKey:@"followInfo"];
-            return [user save:error];
-        } else {
-            return NO;
-        }
+        return [INSParseQueryManager _createFollowInfoForUser:user error:error];
     }
 }
 
-// 绑定用户和设备，用于推送
-+ (BOOL)_linkInstallationWithUser:(PFUser *)user error:(NSError **)error {
+// 绑定用户和设备，重置badge
++ (BOOL)_linkPushWithUser:(PFUser *)user error:(NSError **)error {
     [[PFInstallation currentInstallation] setObject:user forKey:@"user"];
+    [[PFInstallation currentInstallation] setBadge:0];
     return [[PFInstallation currentInstallation] save:error];
+}
+
+// 解除用户和设备绑定，重置badge
++ (void)_unlinkPushWithUser {
+    [[PFInstallation currentInstallation] removeObjectForKey:@"user"];
+    [[PFInstallation currentInstallation] setBadge:0];
+    [[PFInstallation currentInstallation] saveEventually];
 }
 
 // 一个用户仅允许一个session登录。查询当前用户的其他session，然后删除。

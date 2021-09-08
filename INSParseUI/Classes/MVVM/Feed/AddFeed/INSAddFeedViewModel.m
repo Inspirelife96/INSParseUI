@@ -27,7 +27,7 @@
         _category = @(0);
         _title = @"";
         _content = @"";
-        _forwardFrom = @"";
+        _forwardFrom = nil;
         _isOriginal = YES;
         
         _selectedPhotos = [[NSMutableArray alloc] init];
@@ -121,10 +121,10 @@
         return NO;
     }
     
-    if ((self.enableContentCell) && (![self.forwardFrom isEqualToString:@""] && ![self.forwardFrom jk_isEmailAddress])) {
-        *errorMessage = @"请输入正确的地址，以https://或http://开始";
-        return NO;
-    }
+//    if ((self.enableContentCell) && (![self.forwardFrom isEqualToString:@""] && ![self.forwardFrom jk_isEmailAddress])) {
+//        *errorMessage = @"请输入正确的地址，以https://或http://开始";
+//        return NO;
+//    }
     
     return YES;
 }
@@ -132,7 +132,7 @@
 - (BOOL)needWarningWhenCancel {
     if (![self.title isEqualToString:@""]
         || ![self.content isEqualToString:@""]
-        || ![self.forwardFrom isEqualToString:@""]
+//        || ![self.forwardFrom isEqualToString:@""]
         || self.selectedPhotos.count > 0
         || self.selectedTags.count > 0) {
         return YES;
@@ -179,12 +179,7 @@
                                                       likeCount:@(0)
                                                      shareCount:@(0)
                                                            tags:self.selectedTags
-                                                        extend1:nil
-                                                        extend2:nil
-                                                        extend3:nil
-                                                        extend4:nil
-                                                        extend5:nil
-                                                        extend6:nil
+                                                        article:nil
                                                           error:&error];
         }
         

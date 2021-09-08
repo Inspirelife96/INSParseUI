@@ -29,6 +29,11 @@ typedef NS_ENUM(NSInteger, INSParseReportType) {
     INSParseReportTypeComment = 1
 };
 
+typedef NS_ENUM(NSInteger, INSParseLikeType) {
+    INSParseLikeTypeFeed = 0,
+    INSParseLikeTypeComment = 1
+};
+
 typedef NS_ENUM(NSInteger, INSParseReportReason) {
     INSParseReportReasonPornography = 0,
     INSParseReportReasonIllegal = 1,
@@ -70,23 +75,30 @@ extern NSString *const kFeedFromUser; // 创建者（PFUser）
 
 // 来源和转发 （目前不考虑转发功能）
 extern NSString *const kFeedIsOriginal; // 是否原创 (NSInteger)
-extern NSString *const kFeedForwardFrom; // 来源 (NSString * objectId)
+extern NSString *const kFeedForwardFrom; // 来源 (INSFeed)
 
 // 统计字段：
 extern NSString *const kFeedCommentCount; // 评论数（NSNumber）
 extern NSString *const kFeedLikeCount; // 喜欢/点赞/收藏数（NSNumber）
-extern NSString *const kFeedShareCount; // 分享数（NSNumber）目前不考虑转发功能。
+extern NSString *const kFeedShareCount; // 分享数/转发数（NSNumber）目前不考虑转发功能。
+
+// 图文混编的内容
+extern NSString *const kFeedArticle; // 图文混编的内容 (INSArticle)
 
 // 辅助
 extern NSString *const kFeedTags; // 标签 （NSArray）
 
-// 扩展 可自行定义
-extern NSString *const kFeedExtend1;
-extern NSString *const kFeedExtend2;
-extern NSString *const kFeedExtend3;
-extern NSString *const kFeedExtend4;
-extern NSString *const kFeedExtend5;
-extern NSString *const kFeedExtend6;
+# pragma mark - Article 表
+
+// 文章表，支持图文混编的文章，存储为FileObject类型，根据后缀名来区别文章的存储格式。
+// 而originalLike为一个链接，代表着原生链接
+
+// Class key
+extern NSString *const kArticleClassKey;
+
+// Field keys
+extern NSString *const kArticleContentFile; // 文章内容
+extern NSString *const kArticleOriginalLink; // 原始链接
 
 # pragma mark - Comment 表
 
@@ -109,6 +121,7 @@ extern NSString *const kCommentFromUser; // 谁评论的
 extern NSString *const kLikeClassKey;
 
 // Field keys
+extern NSString *const kLikeType; // 喜欢的类型
 extern NSString *const kLikeToFeed; // 喜欢的Feed
 extern NSString *const kLikeToComment; // 喜欢的Comment
 extern NSString *const kLikeFromUser; // 谁喜欢的
@@ -135,6 +148,19 @@ extern NSString *const kFollowClassKey;
 // Field keys
 extern NSString *const kFollowFromUser; // 关注
 extern NSString *const kFollowToUser; // 被关注
+
+
+# pragma mark - Block 表
+
+// Block表 黑名单表
+
+// Class key
+extern NSString *const kBlockClassKey;
+
+// Field keys
+extern NSString *const kBlockFromUser; // 发起者
+extern NSString *const kBlockToUser; // 黑名单用户
+
 
 # pragma mark - Activity 表
 
@@ -182,6 +208,3 @@ extern NSString *const kFollowInfoClassKey;
 extern NSString *const kFollowInfoFollowCount; // 关注
 extern NSString *const kFollowInfoFollowedCount; // 粉丝
 extern NSString *const kFollowInfoUser; // 用户
-
-
-

@@ -30,12 +30,7 @@
 
 @dynamic tags;
 
-@dynamic extend1;
-@dynamic extend2;
-@dynamic extend3;
-@dynamic extend4;
-@dynamic extend5;
-@dynamic extend6;
+@dynamic article;
 
 + (NSString *)parseClassName {
     return kFeedClassKey;

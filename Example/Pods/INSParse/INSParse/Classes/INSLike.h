@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSNumber *category;
 
+@property (nonatomic, strong) NSNumber *type;
 @property (nonatomic, strong) INSFeed *toFeed;
 @property (nonatomic, strong) INSComment *toComment;
 @property (nonatomic, strong) PFUser *fromUser;

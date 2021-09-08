@@ -38,7 +38,7 @@
     // 这边默认 logout肯定比后面的login先执行，理论上登录/登出如果能放到一个串行队列那就更好了。
     // 这里没有传递UI的刷新操作，而选择发送kNotificationUserLogout通知，这就要求所有UI针对登录/登出通知进行重新刷新。
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [INSParseQueryManager logout];
+        [INSParseQueryManager logOut];
 
         dispatch_async(dispatch_get_main_queue(), ^{
             [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationUserLogout object:nil];

@@ -11,6 +11,8 @@
 #endif
 
 #import "INSActivity.h"
+#import "INSArticle.h"
+#import "INSBlock.h"
 #import "INSComment.h"
 #import "INSFeed.h"
 #import "INSFollow.h"

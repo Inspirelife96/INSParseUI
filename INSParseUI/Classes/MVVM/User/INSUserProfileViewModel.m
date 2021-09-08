@@ -110,7 +110,7 @@
 
 - (void)logout:(void(^)(void))block {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [INSParseQueryManager logout];
+        [INSParseQueryManager logOut];
 
         dispatch_async(dispatch_get_main_queue(), ^{
             [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationUserLogout object:nil];
@@ -121,7 +121,8 @@
 
 - (void)unsubscribe:(void(^)(void))block {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [INSParseQueryManager unsubscribe];
+        NSError *error = nil;
+        [INSParseQueryManager unsubscribe:&error];
 
         dispatch_async(dispatch_get_main_queue(), ^{
             [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationUserLogout object:nil];

@@ -15,6 +15,7 @@
 
 @dynamic category;
 
+@dynamic type;
 @dynamic toFeed;
 @dynamic toComment;
 @dynamic fromUser;

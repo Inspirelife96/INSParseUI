@@ -45,16 +45,23 @@ NSString *const kFeedCommentCount = @"commentCount";
 NSString *const kFeedLikeCount = @"likeCount";
 NSString *const kFeedShareCount = @"shareCount";
 
+// 文章
+NSString *const kFeedArticle = @"article";
+
 // 辅助
 NSString *const kFeedTags = @"tags";
 
-// 扩展 可自行定义
-NSString *const kFeedExtend1 = @"extend1";
-NSString *const kFeedExtend2 = @"extend2";
-NSString *const kFeedExtend3 = @"extend3";
-NSString *const kFeedExtend4 = @"extend4";
-NSString *const kFeedExtend5 = @"extend5";
-NSString *const kFeedExtend6 = @"extend6";
+# pragma mark - Article 表
+
+// 文章表，支持图文混编的文章，存储为FileObject类型，根据后缀名来区别文章的存储格式。
+// 而originalLike为一个链接，代表着原生链接
+
+// Class key
+NSString *const kArticleClassKey = @"Article";
+
+// Field keys
+NSString *const kArticleContentFile = @"contentFile"; // 文章内容
+NSString *const kArticleOriginalLink = @"originalLink"; // 原始链接
 
 # pragma mark - Comment 表
 
@@ -77,6 +84,7 @@ NSString *const kCommentFromUser = @"fromUser";
 NSString *const kLikeClassKey = @"Like";
 
 // Field keys
+NSString *const kLikeType = @"type";
 NSString *const kLikeToFeed = @"toFeed";
 NSString *const kLikeToComment = @"toComment";
 NSString *const kLikeFromUser = @"fromUser";
@@ -103,6 +111,17 @@ NSString *const kFollowClassKey = @"Follow";
 // Field keys
 NSString *const kFollowFromUser = @"fromUser";
 NSString *const kFollowToUser = @"toUser";
+
+# pragma mark - Block 表
+
+// Block表 黑名单表
+
+// Class key
+NSString *const kBlockClassKey = @"Block";
+
+// Field keys
+NSString *const kBlockFromUser = @"fromUser"; // 发起者
+NSString *const kBlockToUser = @"toUser"; // 黑名单用户
 
 # pragma mark - Activity 表
 

@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSNumber *category;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *content;
-@property (nonatomic, copy) NSString *forwardFrom;
+@property (nonatomic, strong) INSFeed *forwardFrom;
 @property (nonatomic, assign) BOOL isOriginal;
 
 // media contents, 目前只支持图片
