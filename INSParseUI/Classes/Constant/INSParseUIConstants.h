@@ -10,9 +10,9 @@
 #define WEAKSELF __weak __typeof(&*self)weakSelf = self;
 #define STRONGSELF __strong __typeof(weakSelf)strongSelf = weakSelf;
 
-static inline void delay(NSTimeInterval delay, dispatch_block_t block) {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), block);
-}
+//static inline void delay(NSTimeInterval delay, dispatch_block_t block) {
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), block);
+//}
 
 extern NSString *const kNotificationUserLogin;
 extern NSString *const kNotificationUserLogout;

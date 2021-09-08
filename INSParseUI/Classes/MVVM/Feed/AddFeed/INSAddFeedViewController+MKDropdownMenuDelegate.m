@@ -10,14 +10,15 @@
 @implementation INSAddFeedViewController (MKDropdownMenuDelegate)
 
 - (void)dropdownMenu:(MKDropdownMenu *)dropdownMenu didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    delay(0.15, ^{
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [dropdownMenu closeAllComponentsAnimated:YES];
         
         self.addFeedVM.category = @(row);
         
         
         [self.tableView reloadData];
-
     });
 }
 
