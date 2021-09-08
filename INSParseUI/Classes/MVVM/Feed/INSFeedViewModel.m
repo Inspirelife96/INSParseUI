@@ -7,11 +7,6 @@
 
 #import "INSFeedViewModel.h"
 
-#import <INSParse/INSParse-umbrella.h>
-
-#import <JKCategories/NSDate+JKExtension.h>
-
-#import <Parse/Parse.h>
 
 @implementation INSFeedViewModel
 

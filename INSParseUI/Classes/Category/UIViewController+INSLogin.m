@@ -15,9 +15,6 @@
 
 #import "SCLAlertView+ShowOnMostTopViewController.h"
 
-#import <Parse/Parse.h>
-#import <SVProgressHUD/SVProgressHUD.h>
-
 @implementation UIViewController (INSLogin)
 
 - (BOOL)ins_isLogin {

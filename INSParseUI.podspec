@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'INSParseUI'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'A short description of INSParseUI.'
 
 # This description is used to generate tags and improve search results.
@@ -35,6 +35,8 @@ TODO: Add long description of the pod here.
   s.resource_bundles = {
     'INSParseUI' => ['INSParseUI/Assets/*.*']
   }
+  
+  s.prefix_header_contents = '#import <Parse/Parse.h>', '#import <INSParse/INSParse-umbrella.h>', '#import <DZNEmptyDataSet/DZNEmptyDataSet-umbrella.h>', '#import <Lottie/lottie-ios-umbrella.h>', '#import <YBImageBrowser/YBImageBrowser.h>', '#import <SDWebImage/SDWebImage.h>', '#import <Masonry/Masonry.h>', '#import <MJRefresh/MJRefresh.h>', '#import <SVProgressHUD/SVProgressHUD.h>', '#import <SCLAlertView_Objective_C/SCLAlertView-Objective-C-umbrella.h>', '#import <JKCategories/JKCategories-umbrella.h>', '#import <YYText/YYText.h>', '#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>', '#import <SwiftTheme/SwiftTheme-Swift.h>', '#import <TZImagePickerController/TZImagePickerController.h>', '#import <MKDropdownMenu/MKDropdownMenu.h>', '#import <LSTPopView/LSTPopView.h>'
 
   s.public_header_files = 'INSParseUI/Classes/**/*.h'
   s.frameworks = 'UIKit'

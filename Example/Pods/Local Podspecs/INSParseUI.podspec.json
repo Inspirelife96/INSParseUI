@@ -1,6 +1,6 @@
 {
   "name": "INSParseUI",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "summary": "A short description of INSParseUI.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Inspirelife96/INSParseUI",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Inspirelife96/INSParseUI.git",
-    "tag": "0.1.3"
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "13.0"
@@ -24,7 +24,27 @@
       "INSParseUI/Assets/*.*"
     ]
   },
+  "prefix_header_contents": [
+    "#import <Parse/Parse.h>",
+    "#import <INSParse/INSParse-umbrella.h>",
+    "#import <DZNEmptyDataSet/DZNEmptyDataSet-umbrella.h>",
+    "#import <Lottie/lottie-ios-umbrella.h>",
+    "#import <YBImageBrowser/YBImageBrowser.h>",
+    "#import <SDWebImage/SDWebImage.h>",
+    "#import <Masonry/Masonry.h>",
+    "#import <MJRefresh/MJRefresh.h>",
+    "#import <SVProgressHUD/SVProgressHUD.h>",
+    "#import <SCLAlertView_Objective_C/SCLAlertView-Objective-C-umbrella.h>",
+    "#import <JKCategories/JKCategories-umbrella.h>",
+    "#import <YYText/YYText.h>",
+    "#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>",
+    "#import <SwiftTheme/SwiftTheme-Swift.h>",
+    "#import <TZImagePickerController/TZImagePickerController.h>",
+    "#import <MKDropdownMenu/MKDropdownMenu.h>",
+    "#import <LSTPopView/LSTPopView.h>"
+  ],
   "public_header_files": "INSParseUI/Classes/**/*.h",
+  "frameworks": "UIKit",
   "dependencies": {
     "Parse": [
 

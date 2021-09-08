@@ -7,7 +7,6 @@
 
 #import "INSObjectViewModel.h"
 
-#import <INSParse/INSParse-umbrella.h>
 
 #import "INSParseUIConstants.h"
 

@@ -1,5 +1,15 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
+#else
+#ifndef FOUNDATION_EXPORT
+#if defined(__cplusplus)
+#define FOUNDATION_EXPORT extern "C"
+#else
+#define FOUNDATION_EXPORT extern
+#endif
+#endif
+#endif
+
 #import <Parse/Parse.h>
 #import <INSParse/INSParse-umbrella.h>
 #import <DZNEmptyDataSet/DZNEmptyDataSet-umbrella.h>
@@ -17,13 +27,3 @@
 #import <TZImagePickerController/TZImagePickerController.h>
 #import <MKDropdownMenu/MKDropdownMenu.h>
 #import <LSTPopView/LSTPopView.h>
-#else
-#ifndef FOUNDATION_EXPORT
-#if defined(__cplusplus)
-#define FOUNDATION_EXPORT extern "C"
-#else
-#define FOUNDATION_EXPORT extern
-#endif
-#endif
-#endif
-

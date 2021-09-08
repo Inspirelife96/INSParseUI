@@ -7,12 +7,7 @@
 
 #import "INSCommentViewModel.h"
 
-#import <Parse/Parse.h>
-
-
 #import "INSFeedViewModel.h"
-
-#import <JKCategories/NSDate+JKExtension.h>
 
 @implementation INSCommentViewModel
 
