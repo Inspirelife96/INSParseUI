@@ -1,9 +1,9 @@
 {
   "name": "INSParseUI",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "summary": "A short description of INSParseUI.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/inspirelife@hotmail.com/INSParseUI",
+  "homepage": "https://github.com/Inspirelife96/INSParseUI",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,13 +12,18 @@
     "inspirelife@hotmail.com": "inspirelife@hotmail.com"
   },
   "source": {
-    "git": "https://github.com/inspirelife@hotmail.com/INSParseUI.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/Inspirelife96/INSParseUI.git",
+    "tag": "0.1.3"
   },
   "platforms": {
     "ios": "13.0"
   },
   "source_files": "INSParseUI/Classes/**/*",
+  "resource_bundles": {
+    "INSParseUI": [
+      "INSParseUI/Assets/*.*"
+    ]
+  },
   "public_header_files": "INSParseUI/Classes/**/*.h",
   "dependencies": {
     "Parse": [
