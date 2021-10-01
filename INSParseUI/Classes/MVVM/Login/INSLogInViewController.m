@@ -115,12 +115,12 @@
         
         return YES;
     } actionBlock:^{
-        [SVProgressHUD showWithStatus:@"正在登录..."];
-
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        
         [self.view setUserInteractionEnabled:NO];
         
         [self.loginVM loginInBackground:^(BOOL succeeded, NSString *messageTitle, NSString *messageSubTitle) {
-            [SVProgressHUD dismiss];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             
             [self.view setUserInteractionEnabled:YES];
 
@@ -182,11 +182,11 @@
         
         return YES;
     } actionBlock:^{
-        [SVProgressHUD showWithStatus:@"正在注册..."];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [self.view setUserInteractionEnabled:NO];
         
         [self.loginVM signUpInBackground:^(BOOL succeeded, NSString *messageTitle, NSString *messageSubTitle) {
-            [SVProgressHUD dismiss];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             [self.view setUserInteractionEnabled:YES];
 
             if (succeeded) {
@@ -223,13 +223,13 @@
 
         return YES;
     } actionBlock:^{
-        [SVProgressHUD showWithStatus:@"正在处理中..."];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [self.view setUserInteractionEnabled:NO];
         
         WEAKSELF
         [self.loginVM requestPasswordResetForEmailInBackground:^(BOOL succeeded, NSString *messageTitle, NSString *messageSubTitle) {
             STRONGSELF
-            [SVProgressHUD dismiss];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             [self.view setUserInteractionEnabled:YES];
 
             if (succeeded) {
@@ -281,12 +281,12 @@ API_AVAILABLE(ios(13.0)){
         self.loginVM.userName = fullName.familyName;
         self.loginVM.email = email;
         
-        [SVProgressHUD showWithStatus:@"正在登陆..."];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 
         [self.view setUserInteractionEnabled:NO];
         
         [self.loginVM loginWithAppleAuthDataInBackground:^(BOOL succeeded, NSString *messageTitle, NSString *messageSubTitle) {
-            [SVProgressHUD dismiss];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             [self.view setUserInteractionEnabled:YES];
 
             if (succeeded) {

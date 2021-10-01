@@ -162,11 +162,11 @@
     if (![self ins_isLogin]) {
         [self ins_login];
     } else {
-        [SVProgressHUD show];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [self.view setUserInteractionEnabled:NO];
         
         [self.userProfileVM changeFollowedByCurrentUserStatus:^(BOOL succeeded, NSError * _Nullable error) {
-            [SVProgressHUD dismiss];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             [self.view setUserInteractionEnabled:YES];
             if (!succeeded) {
                 [INSParseErrorHandler handleParseError:error];

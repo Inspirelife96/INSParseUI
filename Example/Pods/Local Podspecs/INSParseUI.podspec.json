@@ -1,6 +1,6 @@
 {
   "name": "INSParseUI",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "summary": "A short description of INSParseUI.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Inspirelife96/INSParseUI",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Inspirelife96/INSParseUI.git",
-    "tag": "0.1.6"
+    "tag": "0.1.8"
   },
   "platforms": {
     "ios": "13.0"
@@ -33,7 +33,7 @@
     "#import <SDWebImage/SDWebImage.h>",
     "#import <Masonry/Masonry.h>",
     "#import <MJRefresh/MJRefresh.h>",
-    "#import <SVProgressHUD/SVProgressHUD.h>",
+    "#import <MBProgressHUD/MBProgressHUD-umbrella.h>",
     "#import <SCLAlertView_Objective_C/SCLAlertView-Objective-C-umbrella.h>",
     "#import <JKCategories/JKCategories-umbrella.h>",
     "#import <YYText/YYText.h>",
@@ -92,7 +92,7 @@
     "MJRefresh": [
 
     ],
-    "SVProgressHUD": [
+    "MBProgressHUD": [
 
     ],
     "SCLAlertView-Objective-C": [

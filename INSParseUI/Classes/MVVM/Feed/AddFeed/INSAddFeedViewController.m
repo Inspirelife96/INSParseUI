@@ -118,12 +118,12 @@
     } else {
         [self.view setUserInteractionEnabled:NO];
         [self.navigationController.navigationBar setUserInteractionEnabled:NO];
-        [SVProgressHUD showWithStatus:@"上传中,请耐心等待..."];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         
         WEAKSELF
         [self.addFeedVM addFeedInBackground:^(BOOL succeeded, NSError * _Nullable error) {
             STRONGSELF
-            [SVProgressHUD dismiss];
+            [MBProgressHUD hideHUDForView:strongSelf.view animated:YES];
             [strongSelf.navigationController.navigationBar setUserInteractionEnabled:YES];
             [strongSelf.view setUserInteractionEnabled:YES];
             if (!succeeded) {
@@ -131,7 +131,7 @@
             } else {
                 SCLAlertView *alertView = [[SCLAlertView alloc] init];
                 [alertView addButton:@"了解" actionBlock:^{
-                    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationFeedAdded object:self];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationFeedAdded object:strongSelf];
                     [strongSelf dismissViewControllerAnimated:YES completion:nil];
                 }];
                 

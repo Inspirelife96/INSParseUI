@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'INSParseUI'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.summary          = 'A short description of INSParseUI.'
 
 # This description is used to generate tags and improve search results.
@@ -36,7 +36,7 @@ TODO: Add long description of the pod here.
     'INSParseUI' => ['INSParseUI/Assets/*.*']
   }
   
-  s.prefix_header_contents = '#import <Parse/Parse-umbrella.h>', '#import <INSParse/INSParse-umbrella.h>', '#import <DZNEmptyDataSet/DZNEmptyDataSet-umbrella.h>', '#import <Lottie/lottie-ios-umbrella.h>', '#import <YBImageBrowser/YBImageBrowser.h>', '#import <SDWebImage/SDWebImage.h>', '#import <Masonry/Masonry.h>', '#import <MJRefresh/MJRefresh.h>', '#import <SVProgressHUD/SVProgressHUD.h>', '#import <SCLAlertView_Objective_C/SCLAlertView-Objective-C-umbrella.h>', '#import <JKCategories/JKCategories-umbrella.h>', '#import <YYText/YYText.h>', '#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>', '#import <SwiftTheme/SwiftTheme-Swift.h>', '#import <TZImagePickerController/TZImagePickerController.h>', '#import <MKDropdownMenu/MKDropdownMenu.h>', '#import <LSTPopView/LSTPopView.h>', '#import <HJTabViewController/HJTabViewController-umbrella.h>'
+  s.prefix_header_contents = '#import <Parse/Parse-umbrella.h>', '#import <INSParse/INSParse-umbrella.h>', '#import <DZNEmptyDataSet/DZNEmptyDataSet-umbrella.h>', '#import <Lottie/lottie-ios-umbrella.h>', '#import <YBImageBrowser/YBImageBrowser.h>', '#import <SDWebImage/SDWebImage.h>', '#import <Masonry/Masonry.h>', '#import <MJRefresh/MJRefresh.h>', '#import <MBProgressHUD/MBProgressHUD-umbrella.h>', '#import <SCLAlertView_Objective_C/SCLAlertView-Objective-C-umbrella.h>', '#import <JKCategories/JKCategories-umbrella.h>', '#import <YYText/YYText.h>', '#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>', '#import <SwiftTheme/SwiftTheme-Swift.h>', '#import <TZImagePickerController/TZImagePickerController.h>', '#import <MKDropdownMenu/MKDropdownMenu.h>', '#import <LSTPopView/LSTPopView.h>', '#import <HJTabViewController/HJTabViewController-umbrella.h>'
 
   s.public_header_files = 'INSParseUI/Classes/**/*.h'
   s.frameworks = 'UIKit'
@@ -55,7 +55,7 @@ TODO: Add long description of the pod here.
   s.dependency 'SDWebImage'
   s.dependency 'YBImageBrowser'
   s.dependency 'MJRefresh'
-  s.dependency 'SVProgressHUD'
+  s.dependency 'MBProgressHUD'
   s.dependency 'SCLAlertView-Objective-C'
   s.dependency 'YYText'
   s.dependency 'SwiftTheme'

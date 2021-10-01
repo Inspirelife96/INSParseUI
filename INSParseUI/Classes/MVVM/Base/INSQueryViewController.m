@@ -151,7 +151,7 @@
 
 - (void)updateUIBeforeLoad {
     // 显示进度条
-    [SVProgressHUD show];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     // 停止交互
     [self.view setUserInteractionEnabled:NO];
@@ -164,7 +164,7 @@
 
 - (void)updateUIAfterLoad:(NSError *)error {
     // 取消进度条
-    [SVProgressHUD dismiss];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 
     // 取消表头尾的刷新
     [self.tableView.mj_header endRefreshing];

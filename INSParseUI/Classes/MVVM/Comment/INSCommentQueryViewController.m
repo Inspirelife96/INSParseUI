@@ -67,14 +67,14 @@
     if ([text isEqualToString:@""]) {
         [self ins_alertErrorWithTitle:@"无法上传" subTitle:@"上传内容不能为空"];
     } else {
-        [SVProgressHUD showWithStatus:@"内容上传中..."];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [self.tableView setUserInteractionEnabled:NO];
         
         WEAKSELF
         INSCommentQueryViewModel *commentQueryVM = (INSCommentQueryViewModel *)self.queryVM;
         [commentQueryVM addComment:text withBlock:^(BOOL succeeded, NSError * _Nullable error) {
             STRONGSELF
-            [SVProgressHUD dismiss];
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             [strongSelf.tableView setUserInteractionEnabled:YES];
             if (!succeeded) {
                 [strongSelf ins_alertErrorWithTitle:@"内容上传失败" subTitle:@"请检查您的网络，并稍后再试。"];

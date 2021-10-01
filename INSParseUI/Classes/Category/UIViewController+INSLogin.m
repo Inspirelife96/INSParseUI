@@ -33,9 +33,10 @@
 
 - (void)ins_logout {
     //[[IRDLocalConfiguration sharedInstance] updateToParseServer];
-    [SVProgressHUD showWithStatus:@"退出中..."];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
-        [SVProgressHUD dismiss];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (error) {
             [self ins_alertErrorWithTitle:@"退出失败，请重新再试" subTitle:error.localizedDescription];
         } else {
